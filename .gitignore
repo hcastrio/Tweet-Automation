@@ -2,3 +2,5 @@ venv/
 __pycache__
 gsheet_credentials.json
 .env
+# Sheet api
+# https://docs.google.com/spreadsheets/d/1rYWa5e3eMmWp6LfOAsAeybRx0AZjZapUZcrG_3a0g60/edit#gid=0

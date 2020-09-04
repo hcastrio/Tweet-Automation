@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, redirect
 from datetime import datetime, timedelta
-import gspread
+import gspread # pip install gspread
 
 app = Flask(__name__)
 
 gc = gspread.service_account(filename='gsheet_credentials.json') # connects to the sheets file
-
-sh = gc.open_by_key('1rYWa5e3eMmWp6LfOAsAeybRx0AZjZapUZcrG_3a0g60') # found in the sheets url
-worksheet = sh.sheet1
+# found in the sheets url and opens sheets
+sh = gc.open_by_key('1rYWa5e3eMmWp6LfOAsAeybRx0AZjZapUZcrG_3a0g60') 
+worksheet = sh.sheet1 # locates our only worksheet
 
 class Tweet:
     def __init__(self, message, time, done, row_idx): # same name as sheets file
